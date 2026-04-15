@@ -1,0 +1,21 @@
+{
+  "buildCommand": "cd frontend && npm install && npm run build",
+  "deployCommand": "cd backend && npm install && npm start",
+  "rootDirectory": ".",
+  "services": [
+    {
+      "name": "medical-platform",
+      "type": "web",
+      "env": {
+        "PORT": "4000",
+        "DB_HOST": "mysql",
+        "DB_PORT": "3306",
+        "DB_NAME": "medical_platform",
+        "DB_USER": "medical_user",
+        "DB_PASSWORD": "medical_pass",
+        "JWT_SECRET": "medical-platform-secret-2026",
+        "CORS_ORIGIN": "https://your-project.up.railway.app"
+      }
+    }
+  ]
+}
